@@ -38,9 +38,6 @@ def NanoChestnet(INPUT_SHAPE):
     x = Conv2D(64, (3,3),  dilation_rate=(2,2))(input_img)
     x = relu(x)
     
-    x = Conv2D(64, (3,3),  dilation_rate=(2,2))(input_img)
-    x = relu(x)
-    
     x = MaxPooling2D((3,3))(x)
     
     x = SeparableConv2D(128, (3,3), depth_multiplier=3, dilation_rate=(2,2))(x)
